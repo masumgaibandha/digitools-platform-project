@@ -4,6 +4,10 @@ import Features from "./Features";
 const ProductCard = ({ product }) => {
   const { tag, name, description, price, features, icon } = product;
   const [isSelected, setSelected] = useState(false);
+
+  const handleBuyNow = ()=>{
+    setSelected(true)
+  }
   
   return (
     <div>
@@ -29,7 +33,7 @@ const ProductCard = ({ product }) => {
           </ul>
           <div className="mt-6">
             <button
-              onClick={()=> setSelected(true)}
+              onClick={handleBuyNow}
               className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white rounded-4xl w-full"
               disabled={isSelected}
             >
