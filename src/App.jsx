@@ -5,6 +5,7 @@ import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import Products from './components/Products'
 import Cart from './components/Cart'
+import { ToastContainer } from 'react-toastify'
 
 
 
@@ -59,6 +60,20 @@ const cartsCount = carts.length
      {activeTab === "products" && <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}><Products fetchPromise={fetchPromise} carts={carts} setCarts={setCarts}></Products></Suspense> }
     
     {activeTab === "carts" && <Cart carts={carts} setCarts={setCarts}></Cart>}
+
+    <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+
+/>
     </>
   )
 }
