@@ -18,11 +18,13 @@ function App() {
 const fetchPromise = productFetch()
 const [activeTab, setActiveTab] = useState("products");
 const [carts, setCarts] = useState([])
-console.log(carts, "Product selected")
+
+const cartsCount = carts.length
+  
 
   return (
     <>
-     <Navbar></Navbar>
+     <Navbar carts={carts} setCarts={setCarts}></Navbar>
      {/* <Banner></Banner> */}
      <div>
 
@@ -49,7 +51,7 @@ console.log(carts, "Product selected")
           name="my_tabs_1"
           onClick={()=> setActiveTab("carts")}
           className={`btn ${activeTab === "carts" ? "bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white" : ""} rounded-3xl w-40`}
-          aria-label="Carts (0)"
+          aria-label={`Carts (${cartsCount})`}
         />
       </div>
       </div>
