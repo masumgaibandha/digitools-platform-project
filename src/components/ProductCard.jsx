@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Features from "./Features";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, carts, setCarts }) => {
   const { tag, name, description, price, features, icon } = product;
   const [isSelected, setSelected] = useState(false);
+  
 
   const handleBuyNow = ()=>{
     setSelected(true)
+    setCarts([...carts, product])
   }
   
   return (
