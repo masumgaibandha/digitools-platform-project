@@ -1,10 +1,10 @@
-import React from 'react';
-import cartIms from "../assets/products/shopping-cart.png"
+import React from "react";
+import cartIms from "../assets/products/shopping-cart.png";
 
-const Navbar = ({carts, setCarts}) => {
-  const cartsCount = carts.length
-    return (
-        <div className="bg-base-100 shadow-sm">
+const Navbar = ({ carts}) => {
+  const cartsCount = carts.length;
+  return (
+    <div className="bg-base-100 shadow-sm sticky top-0 z-50 ">
       <div className="navbar max-w-7xl mx-auto py-6">
         <div className="navbar-start">
           <div className="dropdown">
@@ -34,9 +34,6 @@ const Navbar = ({carts, setCarts}) => {
               </li>
               <li>
                 <a>Features</a>
-              </li>            
-              <li>
-                <a>Pricing</a>
               </li>
               <li>
                 <a>Pricing</a>
@@ -49,38 +46,42 @@ const Navbar = ({carts, setCarts}) => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-3xl font-bold bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent">DigiTools</a>
+          <a className="btn btn-ghost text-3xl font-bold bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent">
+            DigiTools
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-[#101727] font-semibold">
             <li>
-                <a>Products</a>
-              </li>
-              <li>
-                <a>Features</a>
-              </li>            
-              <li>
-                <a>Pricing</a>
-              </li>
-              <li>
-                <a>Pricing</a>
-              </li>
-              <li>
-                <a>Testimonials</a>
-              </li>
-              <li>
-                <a>FAQ</a>
-              </li>
+              <a>Products</a>
+            </li>
+            <li>
+              <a>Features</a>
+            </li>
+            <li>
+              <a>Pricing</a>
+            </li>
+            <li>
+              <a>Testimonials</a>
+            </li>
+            <li>
+              <a>FAQ</a>
+            </li>
           </ul>
         </div>
         <div className="navbar-end flex gap-3 items-center">
-            <span className=" text-red-500 font-bold">{cartsCount}<img src={cartIms} alt="" className="w-5 hidden md:block" /></span>
+          <span className=" text-red-500 font-bold">
+            {cartsCount}
+            <img src={cartIms} alt="" className="w-5 hidden md:block" />
+          </span>
           <a className="rounded-2xl hidden md:block">Login</a>
-          <a className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white py-3 px-4 rounded-2xl">Get Started</a>
+          <a className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white py-3 px-4 rounded-2xl">
+            Get Started
+          </a>
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default Navbar;

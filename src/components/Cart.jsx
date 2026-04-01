@@ -12,7 +12,7 @@ const Cart = ({ carts, setCarts }) => {
   const handleDelete = (cart)=>{
     
     const filteredCart = carts.filter(c =>c.id != cart.id)
-    toast.error(`${cart.name}" is removed"`)
+    toast.error(`${cart.name} is removed`);
     setCarts(filteredCart)
   }
   return (

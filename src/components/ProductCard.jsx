@@ -5,14 +5,15 @@ import { toast } from "react-toastify";
 const ProductCard = ({ product, carts, setCarts }) => {
   const { tag, name, description, price, features, icon } = product;
   const [isSelected, setSelected] = useState(false);
-  
 
-  const handleBuyNow = ()=>{
-    setSelected(true)
-    setCarts([...carts, product])
-    toast.success("Added to Cart Successful")
-  }
-  
+  const handleBuyNow = () => {
+   const exists = carts.find((c)=> c.id===product.id)
+   if(exists) return toast.warning("Already added")
+    setSelected(true);
+    setCarts([...carts, product]);
+    toast.success("Added to Cart Successful");
+  };
+
   return (
     <div>
       <div className="card  bg-base-100 shadow-sm border border-gray-200 rounded-2xl">
