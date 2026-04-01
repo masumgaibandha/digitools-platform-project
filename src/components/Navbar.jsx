@@ -5,7 +5,7 @@ const Navbar = ({carts, setCarts}) => {
   const cartsCount = carts.length
     return (
         <div className="bg-base-100 shadow-sm">
-      <div className="navbar max-w-7xl mx-auto">
+      <div className="navbar max-w-7xl mx-auto py-6">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -74,7 +74,7 @@ const Navbar = ({carts, setCarts}) => {
           </ul>
         </div>
         <div className="navbar-end flex gap-3 items-center">
-            <span className="flex gap-2">{cartsCount}<img src={cartIms} alt="" className="w-5 hidden md:block" /></span>
+            <span className=" text-red-500 font-bold">{cartsCount}<img src={cartIms} alt="" className="w-5 hidden md:block" /></span>
           <a className="rounded-2xl hidden md:block">Login</a>
           <a className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white py-3 px-4 rounded-2xl">Get Started</a>
         </div>

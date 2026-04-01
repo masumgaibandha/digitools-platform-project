@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use} from "react";
 import ProductCard from "./ProductCard";
 
 const Products = ({ fetchPromise, carts, setCarts }) => {

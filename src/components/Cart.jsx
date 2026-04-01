@@ -1,4 +1,5 @@
 import React from "react";
+import { LuShoppingCart } from "react-icons/lu";
 import { toast } from "react-toastify";
 
 const Cart = ({ carts, setCarts }) => {
@@ -9,7 +10,7 @@ const Cart = ({ carts, setCarts }) => {
     toast.success("Checkout Successful")
   };
   const handleDelete = (cart)=>{
-    console.log(carts, "Carts deleted")
+    
     const filteredCart = carts.filter(c =>c.id != cart.id)
     toast.error(`${cart.name}" is removed"`)
     setCarts(filteredCart)
@@ -18,9 +19,9 @@ const Cart = ({ carts, setCarts }) => {
     <div>
         
         {
-            carts.length=== 0 ? <div className="text-center py-10 card bg-base-200 rounded-2xl border-2 border-gray-200 mb-6">
-        <h2 className="text-3xl font-bold pb-3">No Tools Selected yet</h2>
-        <p className="text-xl font-bold pb-5">Go to Products tab to select Tools</p>
+            carts.length=== 0 ? <div className="text-center py-10 card bg-base-100 rounded-2xl border-2 border-gray-200 mb-6 md:w-7xl md:mx-auto">
+        <span className="text-3xl font-bold pb-3 flex justify-center "><LuShoppingCart /></span>
+        <p className="text-xl font-bold pb-5">Your Cart is Empty</p>
       </div> : 
 
             <div className="md:w-7xl md:mx-auto mx-5">
