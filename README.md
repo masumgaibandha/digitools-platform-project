@@ -18,3 +18,7 @@
 - Add products to cart and see total count in navbar
 - Remove items from cart and update total price
 - Proceed to checkout clears all cart items
+
+## 
+- Live Link: https://digitools-platforms-projects.netlify.app/
+- GitHub Repository Link: https://github.com/masumgaibandha/digitools-platform-project
