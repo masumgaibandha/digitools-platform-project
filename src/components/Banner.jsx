@@ -5,16 +5,17 @@ import playImg from "../assets/Play.png";
 const Banner = () => {
   return (
     <div>
-      <div className="flex justify-between items-center max-w-7xl mx-auto   gap-6">
+      <div className="grid md:grid-cols-2 justify-between items-center max-w-7xl mx-auto py-10  gap-6">
+        
         <div className="">
-          <div className="space-y-3">
+          <div className="space-y-3 px-10 md:px-3">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-[#9514fa] rounded-full"></div>
               <p className="font-semibold bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent ">
                 New: AI-Powered Tools Available
               </p>
             </div>
-            <h1 className="text-7xl font-extrabold text-[#101727]">
+            <h1 className="text-3xl md:text-7xl font-extrabold text-[#101727]">
               Supercharge Your Digital Workflow
             </h1>
             <p className="text-[18px] text-[#627382]">
@@ -24,7 +25,8 @@ const Banner = () => {
               Products
             </p>
           </div>
-          <div className="py-3">
+
+          <div className="py-3 px-10 md:px-3">
             <button className=" btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white rounded-4xl">
               Explore Products
             </button>
@@ -33,6 +35,7 @@ const Banner = () => {
               Watch Demo
             </button>
           </div>
+
         </div>
 
         <div className="pl-6 ">
@@ -41,20 +44,20 @@ const Banner = () => {
       </div>
       <div className="bg-linear-to-r from-[#4f39f6] to-[#9514fa] py-25 my-14 flex  justify-around items-center">
         <div className="text-white">
-          <span className="text-6xl font-extrabold">50K+</span>
-          <p className="text-2xl font-semibold">Active Users</p>
+          <span className="text-3xl font-bold md:text-6xl md:font-extrabold">50K+</span>
+          <p className="text-xl md:text-2xl font-semibold">Active Users</p>
         </div>
 
         <div className="w-px h-14 bg-gray-300"></div>
 
         <div className="text-white">
-          <span className="text-6xl font-extrabold">200+</span>
-          <p className="text-2xl font-semibold">Premium Tools</p>
+          <span className="text-3xl font-bold md:text-6xl md:font-extrabold">200+</span>
+          <p className="text-xl md:text-2xl font-semibold">Premium Tools</p>
         </div>
         <div className="w-px h-14 bg-gray-300"></div>
         <div className="text-white">
-          <span className="text-6xl font-extrabold">4.9</span>
-          <p className="text-2xl font-semibold">Rating</p>
+          <span className="text-3xl font-bold md:text-6xl md:font-extrabold">4.9</span>
+          <p className="text-xl md:text-2xl font-semibold">Rating</p>
         </div>
       </div>
     </div>

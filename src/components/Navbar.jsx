@@ -74,8 +74,8 @@ const Navbar = ({carts, setCarts}) => {
           </ul>
         </div>
         <div className="navbar-end flex gap-3 items-center">
-            <span className="flex gap-2">{cartsCount}<img src={cartIms} alt="" className="w-5" /></span>
-          <a className="rounded-2xl">Login</a>
+            <span className="flex gap-2">{cartsCount}<img src={cartIms} alt="" className="w-5 hidden md:block" /></span>
+          <a className="rounded-2xl hidden md:block">Login</a>
           <a className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white py-3 px-4 rounded-2xl">Get Started</a>
         </div>
       </div>

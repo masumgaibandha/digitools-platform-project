@@ -23,7 +23,7 @@ const Cart = ({ carts, setCarts }) => {
         <p className="text-xl font-bold pb-5">Go to Products tab to select Tools</p>
       </div> : 
 
-            <div className="w-7xl mx-auto">
+            <div className="md:w-7xl md:mx-auto mx-5">
        
       {carts.map((cart, index) => {
         return (

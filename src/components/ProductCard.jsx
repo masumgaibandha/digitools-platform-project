@@ -15,7 +15,7 @@ const ProductCard = ({ product, carts, setCarts }) => {
   
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-sm border border-gray-200 rounded-2xl">
+      <div className="card  bg-base-100 shadow-sm border border-gray-200 rounded-2xl">
         <div className="card-body">
           <div className="flex justify-end">
             <span className="badge badge-md bg-[#FEF3C6] ">{tag}</span>

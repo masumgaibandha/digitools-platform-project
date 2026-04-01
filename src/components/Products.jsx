@@ -5,7 +5,7 @@ const Products = ({ fetchPromise, carts, setCarts }) => {
   const productsData = use(fetchPromise);
   
   return (
-    <div className="py-5 w-7xl mx-auto">
+    <div className="py-5 md:w-7xl md:mx-auto px-6">
       
 
       
